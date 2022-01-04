@@ -14,11 +14,15 @@ body {
     padding:50px;
     font-size: 50px;
 }
+.scoreboard {
+    display: flex;
+    justify-content: center;
+}
 .buttons {
    display: flex;
    justify-content: center;
 }
-button {
+.btn {
     padding:10px;
     margin: 20px;
     border-radius: 5px;
