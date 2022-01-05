@@ -29,6 +29,7 @@ function computerPlay(options) {
    return randomOption;
 } 
 var options = ['Rock','Paper','Scissors'];
+scoreDisplay();
 function gameLoop() {
       var computerSelection = computerPlay(options);
       playerSelection = playerSelection.toLowerCase();
@@ -57,7 +58,6 @@ function gameLoop() {
          }
          roundResult.textContent = 'Player wins the round! ' + playerSelection +' beats ' + computerSelection;
       }
-    
    if(playerScore === 5 || computerScore === 5) {
       winner();
    }  
@@ -65,7 +65,6 @@ function gameLoop() {
 function scoreDisplay() {
    computerScorer.textContent ='Player: ' + playerScore + ' Computer: ' + computerScore;
 }
-
 function winner() { 
    if(playerScore > computerScore) {
    finalResult.textContent = 'Player takes the game! ' + playerScore + ' to ' + computerScore;
@@ -78,7 +77,6 @@ function winner() {
    }
    disableButtons();
 }
-
 function disableButtons() {
    btns.forEach(btn => { btn.disabled = true; })
 }
